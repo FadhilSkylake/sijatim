@@ -8,7 +8,7 @@ class NewsModel extends Model
 {
     protected $table = 'news';
     protected $primaryKey = 'id_news';
-    protected $allowedFields = ['id_news', 'judul_berita', 'isi_berita'];
+    protected $allowedFields = ['id_news', 'judul_berita', 'slug', 'isi_berita'];
 
     public function getNewsById($id)
     {

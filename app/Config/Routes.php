@@ -55,3 +55,4 @@ $routes->post('pesanan/store', 'PesananController::store');
 $routes->post('/checkout', 'CheckoutController::submit', ['filter' => 'authCheck']);
 
 $routes->get('pesanan', 'PesananController::index');
+$routes->get('report', 'IpAddressController::index');

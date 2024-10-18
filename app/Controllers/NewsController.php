@@ -25,9 +25,11 @@ class NewsController extends Controller
     public function store()
     {
         // Ambil data dari permintaan
+        $judul_berita = $this->request->getPost('judul_berita');
         $data = [
-            'judul_berita' => $this->request->getPost('judul_berita'),
+            'judul_berita' => $judul_berita,
             'isi_berita' => $this->request->getPost('isi_berita'),
+            'slug' => url_title($judul_berita, '-', true) // Buat slug dari judul berita
         ];
 
         // Simpan berita baru
@@ -35,6 +37,7 @@ class NewsController extends Controller
 
         return redirect()->to('/news'); // Kembalikan ke kelola berita
     }
+
 
     public function edit($id)
     {
@@ -67,9 +70,11 @@ class NewsController extends Controller
         }
 
         // Jika validasi berhasil, lanjutkan untuk memperbarui data
+        $judul_berita = $this->request->getVar('judul_berita');
         $data = [
-            'judul_berita' => $this->request->getVar('judul_berita'),
+            'judul_berita' => $judul_berita,
             'isi_berita' => $this->request->getVar('isi_berita'),
+            'slug' => url_title($judul_berita, '-', true) // Buat slug dari judul berita
         ];
 
         // Cek apakah data berhasil diupdate
@@ -84,20 +89,19 @@ class NewsController extends Controller
         }
     }
 
-
     public function delete($id)
     {
         $model = new NewsModel();
 
-        // Cek apakah produk ada sebelum dihapus
+        // Cek apakah berita ada sebelum dihapus
         if ($model->find($id)) {
             $model->delete($id);
-            session()->setFlashdata('pesan', 'Produk berhasil dihapus.');
+            session()->setFlashdata('pesan', 'Berita berhasil dihapus.');
 
             // Mengembalikan respons sukses
             return $this->response->setJSON(['status' => 'success']);
         } else {
-            // Jika produk tidak ditemukan
+            // Jika berita tidak ditemukan
             session()->setFlashdata('pesan', 'Berita tidak ditemukan.');
             return $this->response->setJSON(['status' => 'error']);
         }

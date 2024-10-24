@@ -37,7 +37,7 @@
 
                 <div class="form-group row">
                     <label for="isi_berita" class="col-sm-2 col-form-label">Isi Berita</label>
-                    <div class="col-sm-5">
+                    <div class="col-sm-10">
                         <textarea type="text" class="form-control" id="isi_berita" name="isi_berita" required><?= (old('isi_berita')) ? old('isi_berita') : esc($news['isi_berita']) ?></textarea>
                     </div>
                 </div>

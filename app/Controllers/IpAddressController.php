@@ -12,7 +12,7 @@ class IpAddressController extends BaseController
 
         $data = [
             'breadcrumbs' => 'Grafik Pengunjung',
-            'ipData' => $model->getIpAddressCountByDate() // Ambil data jumlah ip_address per tanggal
+            'ipData' => $model->getIpAddressCountByUser() // Ambil data jumlah ip_address per tanggal
         ];
 
         // Kirim data ke view

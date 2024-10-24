@@ -15,7 +15,7 @@
 
     <!-- vendor css -->
     <link rel="stylesheet" href="<?= base_url('assets/css/style.css'); ?>">
-
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 
 </head>
@@ -70,6 +70,7 @@
     <script src="<?= base_url('assets/js/plugins/bootstrap.min.js'); ?>"></script>
     <script src="<?= base_url('assets/js/ripple.js'); ?>"></script>
     <script src="<?= base_url('assets/js/pcoded.min.js'); ?>"></script>
+
 </body>
 
 </html>

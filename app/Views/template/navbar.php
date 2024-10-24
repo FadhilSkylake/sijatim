@@ -24,6 +24,9 @@
                 <li class="nav-item">
                     <a href="<?= route_to('news') ?>" class="nav-link "><span class="pcoded-micon"><i class="feather icon-info"></i></span><span class="pcoded-mtext">Berita</span></a>
                 </li>
+                <li class="nav-item">
+                    <a href="<?= route_to('report') ?>" class="nav-link "><span class="pcoded-micon"><i class="feather icon-info"></i></span><span class="pcoded-mtext">Laporan</span></a>
+                </li>
             </ul>
         </div>
     </div>

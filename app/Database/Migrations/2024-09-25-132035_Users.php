@@ -9,7 +9,7 @@ class Users extends Migration
     public function up()
     {
         $this->forge->addField([
-            'id' => [
+            'id_user' => [
                 'type' => 'INT',
                 'constraint' => 11,
                 'unsigned' => true,
@@ -31,7 +31,7 @@ class Users extends Migration
             'role' => [
                 'type' => 'ENUM',
                 'constraint' => ['admin', 'konsumen'],
-                'default' => 'konsumen', // Default role for registrasi konsumen
+                'default' => 'admin', // Default role for registrasi konsumen
             ],
             'created_at' => [
                 'type' => 'DATETIME',
@@ -42,7 +42,7 @@ class Users extends Migration
                 'null' => true,
             ],
         ]);
-        $this->forge->addKey('id', true);
+        $this->forge->addKey('id_user', true);
         $this->forge->createTable('users');
     }
 

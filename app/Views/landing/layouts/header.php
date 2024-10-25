@@ -23,7 +23,6 @@
                                         <li> <a href="#about">About</a> </li>
                                         <li> <a href="#produk">Produk</a> </li>
                                         <li> <a href="#testimonial">Testimonial</a> </li>
-                                        <li> <a href="/login">Order NOW</a> </li>
                                     </ul>
                                 </nav>
                             </div>
@@ -45,6 +44,7 @@
                         <h1>Oyster Mushroom<br> Shop</h1>
                         <p>Fresh Oyster Mushrooms, A Natural Solution for Every Dish. </p>
                     </div>
+                    <a href="/register" class="btn btn-dark btn-lg">SIGN UP DAPATKAN PENAWARAN</a>
                 </div>
                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
                     <div class="images_box">

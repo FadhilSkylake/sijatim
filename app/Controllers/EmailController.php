@@ -18,7 +18,7 @@ class EmailController extends BaseController
     {
         $email = \Config\Services::email();
         foreach ($this->request->getVar('users') as $u) {
-            $email->setFrom('admin@gatherthriftauto.com', 'Gather Thrift Auto');
+            $email->setFrom('reggyrafli17@gmail.com', 'Daud Jamur');
             $email->setTo($u);
             $email->setSubject($this->request->getVar('subjek'));
             $email->setMessage($this->request->getVar('isi'));

@@ -40,7 +40,6 @@ $routes->post('/email', 'EmailController::sendEmail');
 
 // News
 $routes->get('news', 'NewsController::index');
-$routes->get('pilihnews', 'NewsController::indexNews');
 $routes->post('news/store', 'NewsController::store');
 $routes->post('news/update/(:segment)', 'NewsController::update/$1');
 $routes->delete('news/delete/(:segment)', 'NewsController::delete/$1');

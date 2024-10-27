@@ -21,7 +21,7 @@
     <?php endif; ?>
     <div class="card">
         <div class="card-header">
-            <h5>Daftar Berita</h5>
+            <h5>Kelola Berita</h5>
             <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addModal">Add News</button>
         </div>
         <div class="card-body table-border-style">

@@ -13,16 +13,16 @@
                     <label>Admin Menu</label>
                 </li>
                 <li class="nav-item">
-                    <a href="<?= route_to('user') ?>" class="nav-link "><span class="pcoded-micon"><i class="feather icon-user"></i></span><span class="pcoded-mtext">User</span></a>
+                    <a href="<?= route_to('user') ?>" class="nav-link "><span class="pcoded-micon"><i class="feather icon-user"></i></span><span class="pcoded-mtext">Kelola User</span></a>
                 </li>
                 <li class="nav-item">
-                    <a href="<?= route_to('produk') ?>" class="nav-link "><span class="pcoded-micon"><i class="feather icon-airplay"></i></span><span class="pcoded-mtext">Produk</span></a>
+                    <a href="<?= route_to('produk') ?>" class="nav-link "><span class="pcoded-micon"><i class="feather icon-airplay"></i></span><span class="pcoded-mtext">Kelola Produk</span></a>
                 </li>
                 <li class="nav-item">
-                    <a href="<?= route_to('email') ?>" class="nav-link "><span class="pcoded-micon"><i class="feather icon-map"></i></span><span class="pcoded-mtext">Email Marketing</span></a>
+                    <a href="<?= route_to('email') ?>" class="nav-link "><span class="pcoded-micon"><i class="feather icon-map"></i></span><span class="pcoded-mtext">Kelola Email Marketing</span></a>
                 </li>
                 <li class="nav-item">
-                    <a href="<?= route_to('news') ?>" class="nav-link "><span class="pcoded-micon"><i class="feather icon-info"></i></span><span class="pcoded-mtext">Berita</span></a>
+                    <a href="<?= route_to('news') ?>" class="nav-link "><span class="pcoded-micon"><i class="feather icon-info"></i></span><span class="pcoded-mtext">Kelola Berita</span></a>
                 </li>
                 <li class="nav-item">
                     <a href="<?= route_to('report') ?>" class="nav-link "><span class="pcoded-micon"><i class="feather icon-info"></i></span><span class="pcoded-mtext">Laporan</span></a>

@@ -61,10 +61,6 @@
     <?= $this->include('landing/layouts/jamur') ?>
     <!-- end jamur -->
 
-    <!-- testimonial -->
-    <?= $this->include('landing/layouts/testimonial') ?>
-    <!-- end testimonial -->
-
     <!--  footer -->
     <?= $this->include('landing/layouts/footer') ?>
     <!-- end footer -->

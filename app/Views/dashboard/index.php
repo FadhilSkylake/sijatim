@@ -9,8 +9,8 @@
                 <div class="card-body">
                     <div class="row align-items-center">
                         <div class="col-8">
-                            <h4 class="text-c-yellow">$30200</h4>
-                            <h6 class="text-muted m-b-0">Total Pendapatan</h6>
+                            <h4 class="text-c-yellow"><?= $pengunjung; ?></h4>
+                            <h6 class="text-muted m-b-0">Total Pengunjung</h6>
                         </div>
                         <div class="col-4 text-right">
                             <i class="feather icon-bar-chart-2 f-28"></i>
@@ -38,8 +38,84 @@
     <!-- support-section end -->
 </div>
 
+<div class="container-fluid">
+
+    <div class="card">
+        <div class="card-header">
+            <h5>Grafik Pengunjung Berdasarkan Tanggal</h5>
+        </div>
+        <div class="card-body table-border-style">
+            <canvas id="ipChart" width="400" height="200"></canvas>
+            <script>
+                var ctx = document.getElementById('ipChart').getContext('2d');
+                var ipChart = new Chart(ctx, {
+                    type: 'bar', // Ubah tipe grafik menjadi bar
+                    data: {
+                        labels: [
+                            <?php foreach ($ipData as $data) {
+                                echo '"' . $data['visit_time'] . '", ';
+                            } ?>
+                        ],
+                        datasets: [{
+                            label: 'Jumlah Kunjungan berdasarkan Tanggal',
+                            data: [
+                                <?php foreach ($ipData as $data) {
+                                    echo $data['total'] . ', ';
+                                } ?>
+                            ],
+                            backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                            borderColor: 'rgba(75, 192, 192, 1)',
+                            borderWidth: 1
+                        }]
+                    },
+                    options: {
+                        scales: {
+                            y: {
+                                beginAtZero: true
+                            }
+                        }
+                    }
+                });
+            </script>
+        </div>
+    </div>
+</div>
+
+<div class="container mt-5">
+    <h2 class="mb-4">Visitor Logs</h2>
+    <table id="visitorLogsTable" class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th>No</th>
+                <th>IP Address</th>
+                <th>Referrer</th>
+                <th>Visited Page</th>
+                <th>Visit Time</th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php $no = 1;
+            if (!empty($visitor_logs) && is_array($visitor_logs)): ?>
+                <?php foreach ($visitor_logs as $log): ?>
+                    <tr>
+                        <td><?= $no++ ?></td>
+                        <td><?= esc($log['ip_address']) ?></td>
+                        <td><?= esc($log['referrer']) ?></td>
+                        <td><?= esc($log['visited_page']) ?></td>
+                        <td><?= esc($log['visit_time']) ?></td>
+                    </tr>
+                <?php endforeach; ?>
+            <?php else: ?>
+                <tr>
+                    <td colspan="5" class="text-center">No visitor logs found</td>
+                </tr>
+            <?php endif; ?>
+        </tbody>
+    </table>
+</div>
+
 <!-- prject ,team member start -->
-<div class="col-xl-6 col-md-12">
+<!-- <div class="col-xl-6 col-md-12">
     <div class="card latest-update-card">
         <div class="card-header">
             <h5>Pesanan Baru Baru Ini</h5>
@@ -98,11 +174,11 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->
 <!-- prject ,team member start -->
 
 <!-- Latest Customers start -->
-<div class="col-lg-8 col-md-12">
+<!-- <div class="col-lg-8 col-md-12">
     <div class="card table-card review-card">
         <div class="card-header borderless ">
             <h5>Customer Reviews</h5>
@@ -140,7 +216,13 @@
         </div>
     </div>
 
-</div>
+</div> -->
 
-
+<script>
+    $(document).ready(function() {
+        $('#visitorLogsTable').DataTable({
+            "pageLength": 5 // Menampilkan 5 data per halaman
+        });
+    });
+</script>
 <?= $this->endSection() ?>

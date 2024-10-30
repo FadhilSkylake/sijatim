@@ -12,6 +12,8 @@ use CodeIgniter\Filters\InvalidChars;
 use CodeIgniter\Filters\PageCache;
 use CodeIgniter\Filters\PerformanceMetrics;
 use CodeIgniter\Filters\SecureHeaders;
+use App\Filters\VisitorLogFilter;
+
 
 class Filters extends BaseFilters
 {
@@ -35,6 +37,7 @@ class Filters extends BaseFilters
         'pagecache'     => PageCache::class,
         'performance'   => PerformanceMetrics::class,
         'authCheck' => \App\Filters\AuthCheck::class,
+        'visitorLog' => VisitorLogFilter::class,
     ];
 
     /**
@@ -72,6 +75,7 @@ class Filters extends BaseFilters
         'before' => [
             // 'honeypot',
             'csrf' => ['except' => ['login', 'register', 'checkout']],
+            'visitorLog', // Memasukkan filter visitorLog untuk semua request
             // 'invalidchars',
         ],
         'after' => [

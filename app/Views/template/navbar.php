@@ -25,7 +25,7 @@
                     <a href="<?= route_to('news') ?>" class="nav-link "><span class="pcoded-micon"><i class="feather icon-info"></i></span><span class="pcoded-mtext">Kelola Berita</span></a>
                 </li>
                 <li class="nav-item">
-                    <a href="<?= route_to('report') ?>" class="nav-link "><span class="pcoded-micon"><i class="feather icon-info"></i></span><span class="pcoded-mtext">Laporan</span></a>
+                    <a target="_blank" href="https://analytics.google.com/analytics/web/?authuser=5&hl=id#/p464931344/reports/reportinghub?params=_u..nav%3Dmaui" class="nav-link "><span class="pcoded-micon"><i class="feather icon-info"></i></span><span class="pcoded-mtext">Google Analytics</span></a>
                 </li>
             </ul>
         </div>

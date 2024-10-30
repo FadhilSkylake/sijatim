@@ -6,13 +6,17 @@ use App\Models\IpAddressModel;
 
 class IpAddressController extends BaseController
 {
+    protected $ipModel;
+    public function __construct()
+    {
+        $this->ipModel = new IpAddressModel();
+    }
     public function index()
     {
-        $model = new IpAddressModel();
 
         $data = [
-            'breadcrumbs' => 'Grafik Pengunjung',
-            'ipData' => $model->getIpAddressCountByUser() // Ambil data jumlah ip_address per tanggal
+            'breadcrumbs' => 'Grafik Pengunjung'
+
         ];
 
         // Kirim data ke view

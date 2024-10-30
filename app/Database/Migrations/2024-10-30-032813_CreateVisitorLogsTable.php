@@ -32,7 +32,7 @@ class CreateVisitorLogsTable extends Migration
                 'null' => false,
             ],
         ]);
-        $this->forge->addKey('id', true);
+        $this->forge->addKey('id_ip', true);
         $this->forge->createTable('visitor_logs');
     }
 

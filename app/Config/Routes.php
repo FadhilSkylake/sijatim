@@ -37,6 +37,10 @@ $routes->get('user/getUser/(:segment)', 'UserController::getUser/$1');
 // Email Marketing
 $routes->get('email', 'EmailController::index');
 $routes->post('/email', 'EmailController::sendEmail');
+//Email Subscribe
+$routes->post('getemail', 'EmailController::getEmail');
+$routes->get('emailsub', 'EmailController::showEmailSub');
+$routes->delete('email/delete/(:segment)', 'EmailController::delete/$1');
 
 // News
 $routes->get('news', 'NewsController::index');

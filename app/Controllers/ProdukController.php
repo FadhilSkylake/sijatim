@@ -25,7 +25,6 @@ class ProdukController extends Controller
     public function store()
     {
         // Ambil data dari permintaan
-        // $produkId = $this->request->getPost('produkId');
         $data = [
             'nama_barang' => $this->request->getPost('nama_barang'),
             'harga_barang' => $this->request->getPost('harga_barang'),
@@ -33,14 +32,8 @@ class ProdukController extends Controller
             'stok_barang' => $this->request->getPost('stok_barang')
         ];
 
-        // Jika produkId ada, berarti kita melakukan update
-
         // Simpan produk baru
         $this->m_produk->saveProduk($data);
-        // $response = [
-        //     'success' => true,
-        //     'message' => 'Produk berhasil disimpan.'
-        // ];
 
         return redirect()->to('/produk'); // Mengembalikan respons JSON
     }

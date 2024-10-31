@@ -19,6 +19,9 @@
                     <a href="<?= route_to('produk') ?>" class="nav-link "><span class="pcoded-micon"><i class="feather icon-airplay"></i></span><span class="pcoded-mtext">Kelola Produk</span></a>
                 </li>
                 <li class="nav-item">
+                    <a href="<?= route_to('emailsub') ?>" class="nav-link "><span class="pcoded-micon"><i class="feather icon-airplay"></i></span><span class="pcoded-mtext">Email Subscribe</span></a>
+                </li>
+                <li class="nav-item">
                     <a href="<?= route_to('email') ?>" class="nav-link "><span class="pcoded-micon"><i class="feather icon-map"></i></span><span class="pcoded-mtext">Kelola Email Marketing</span></a>
                 </li>
                 <li class="nav-item">

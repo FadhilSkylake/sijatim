@@ -38,6 +38,46 @@
     <!-- Tweaks for older IEs-->
     <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+    <style>
+        /* CSS untuk membuat tombol sticky lebih besar dan responsif di bagian bawah layar */
+        .sticky-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1050;
+            padding: 15px 30px;
+            font-size: 1.25rem;
+            border-radius: 30px;
+        }
+
+        /* Styling khusus untuk mobile */
+        @media (max-width: 576px) {
+            .sticky-button {
+                padding: 10px 20px;
+                /* Kurangi padding pada tampilan mobile */
+                font-size: 1rem;
+                /* Ukuran font lebih kecil pada tampilan mobile */
+                right: 10px;
+                /* Sedikit bergeser lebih ke dalam */
+                bottom: 10px;
+            }
+
+            .modal-dialog {
+                margin: 1rem;
+                /* Supaya modal lebih rapi di tampilan kecil */
+            }
+        }
+
+        /* Styling tambahan untuk card di dalam carousel */
+        .carousel-item {
+            display: flex;
+            justify-content: center;
+        }
+
+        .card {
+            width: 18rem;
+        }
+    </style>
     <!--[if lt IE 9]>
 <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
 <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->

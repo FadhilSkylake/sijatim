@@ -20,12 +20,12 @@
                 <div class="form-group row">
                     <label for="" class="col-sm-2 col-form-label">Pelanggan</label>
                     <div class="col-sm-5">
-                        <select name="users[]" class="form-control">
+                        <select name="email_sub[]" class="form-control">
                             <?php $db = db_connect();
-                            $query = $db->query('SELECT * FROM users');
+                            $query = $db->query('SELECT * FROM email_sub');
                             foreach ($query->getResultArray() as $r) { ?>
                                 <!-- <option value="" selected enabled>Pilih Pelanggan</option> -->
-                                <option value="<?= $r['email'] ?>"><?= $r['name'] ?> - (<?= $r['email'] ?>)</option>
+                                <option value="<?= $r['email'] ?>">(<?= $r['email'] ?>)</option>
                             <?php }
                             ?>
                         </select>

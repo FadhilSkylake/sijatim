@@ -1,29 +1,30 @@
-<div id="jamur" class="jamur">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="titlepage">
-                    <h2> Fresh <strong class="llow">MUSHROOM</strong> </h2>
+<div id="berita" class="berita">
+    <div class="container my-5">
+        <h2 class="text-center">Latest News</h2>
+        <div id="newsCarousel" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <!-- Item pertama akan aktif, carousel-item lainnya sebagai slide -->
+                <div class="carousel-item active">
+                    <div class="card">
+                        <img src="https://via.placeholder.com/150" class="card-img-top" alt="News Image">
+                        <div class="card-body">
+                            <h5 class="card-title">News Title 1</h5>
+                            <p class="card-text">Some quick example text to build on the news title and make up the bulk of the card's content.</p>
+                            <a href="#" class="btn btn-primary">Read More</a>
+                        </div>
+                    </div>
                 </div>
+
             </div>
-        </div>
-        <div class="row">
-            <div class="col-xl-5 col-lg-5 col-md-5 col-sm-12 ">
-                <div class="jamur_shop">
-                    <h3>Best Jamurs Shop</h3>
-                    <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages andIt is a long established fact that a reader will be distracted </p>
-                </div>
-            </div>
-            <div class="col-xl-7 col-lg-7 col-md-7 col-sm-12 ">
-                <div class="jamur_img">
-                    <figure><img src="<?= base_url('landing/images/jamur1.jpg') ?>" alt="#" /></figure>
-                </div>
-            </div>
-            <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12 ">
-                <div class="jamur_img margin_top">
-                    <figure><img src="<?= base_url('landing/images/ruangan-jamur.jpg') ?>" alt="#" /></figure>
-                </div>
-            </div>
+            <!-- Controls untuk slide -->
+            <a class="carousel-control-prev" href="#newsCarousel" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#newsCarousel" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
         </div>
     </div>
 </div>

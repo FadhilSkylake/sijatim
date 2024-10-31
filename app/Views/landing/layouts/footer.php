@@ -12,7 +12,7 @@
                                 <h3>Alamat </h3>
                                 <ul class="loca">
                                     <li>
-                                        RT 08/03 kelurahan Desa Tambaka Mekar, Kecamatan Jalancagak, Kabupaten Subang
+                                        RT 08/03 kelurahan Desa Tambak Mekar, Kecamatan Jalancagak, Kabupaten Subang
                                         <br>+6281220737514
                                     </li>
                                 </ul>
@@ -23,6 +23,7 @@
                                 <h3>Social Link</h3>
                                 <ul class="Menu_footer">
                                     <li><a href="https://instagram.com/daudjamur" target="_blank">Instagram > @daudjamur</a></li>
+                                    <li><a href="https://api.whatsapp.com/send?phone=081220737514&fbclid=PAZXh0bgNhZW0CMTEAAabk9DklDYdnUWZCGAdq9g6r7ualUkN7vy_gQ7o9M0yynOrDixUiG5ivXMU_aem_w6tfIl22a0dO7Uj3-aioxQ" target="_blank">Whatsapp Direct</a></li>
                                 </ul>
                             </div>
                         </div>

@@ -26,7 +26,7 @@
         </div>
         <div class="card-body table-border-style">
             <div class="table-responsive">
-                <table class="table" id="userTable">
+                <table class="table" id="universalTables">
                     <thead>
                         <tr>
                             <th>#</th>

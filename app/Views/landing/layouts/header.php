@@ -40,15 +40,40 @@
             <div class="row">
                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
                     <div class="text-bg">
-                        <span>Welcome To DaudJamur</span>
-                        <h1>Oyster Mushroom<br> Shop</h1>
-                        <p>Fresh Oyster Mushrooms, A Natural Solution for Every Dish. </p>
+                        <span>Selamat Datang di DaudJamur</span>
+                        <h1>Petani Jamur Subang</h1>
                     </div>
-                    <a href="/register" class="btn btn-dark btn-lg">SIGN UP DAPATKAN PENAWARAN</a>
+                    <!-- Button to trigger modal -->
+                    <button type="button" class="btn btn-primary sticky-button" data-toggle="modal" data-target="#stayUpdatedModal">
+                        BERLANGGANAN DENGAN KAMI
+                    </button>
                 </div>
                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
                     <div class="images_box">
                         <figure><img src="<?= base_url('landing/images/mushroom-oyster.png') ?>"></figure>
+                    </div>
+                </div>
+                <!-- Modal -->
+                <div class="modal fade" id="stayUpdatedModal" tabindex="-1" role="dialog" aria-labelledby="modalTitle" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content bg-dark text-light">
+                            <div class="modal-header border-0">
+                                <h5 class="modal-title" id="modalTitle">Stay Updated</h5>
+                                <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <p>Dapatkan berita, pembaruan, dan hal-hal terkini yang akan datang!<br>Daftar Newsletter kami di sini.</p>
+                                <form action="<?= base_url('/getemail') ?>" method="post">
+                                    <?= csrf_field() ?>
+                                    <div class="form-group">
+                                        <input type="email" class="form-control" placeholder="Email *" name="email">
+                                    </div>
+                                    <button type="submit" class="btn btn-primary btn-block">Subscribe</button>
+                                </form>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

@@ -59,11 +59,11 @@ class UserController extends BaseController
         // Cek apakah data berhasil ditambah
         if ($this->user->save($data)) {
             // Jika save berhasil, set flashdata dan redirect
-            session()->setFlashdata('pesan', 'Data berhasil diperbarui.');
+            session()->setFlashdata('pesan', 'User Berhasil Ditambahkan.');
             return redirect()->to('/user');
         } else {
             // Jika save gagal, set flashdata dan redirect kembali ke halaman edit
-            session()->setFlashdata('pesan', 'Gagal memperbarui data.');
+            session()->setFlashdata('pesan', 'User Gagal Ditambahkan.');
             return redirect()->to('/user');
         }
     }
@@ -104,11 +104,11 @@ class UserController extends BaseController
         // Cek apakah data berhasil diupdate
         if ($this->user->update($id, $data)) {
             // Jika update berhasil, set flashdata dan redirect
-            session()->setFlashdata('pesan', 'Data berhasil diperbarui.');
+            session()->setFlashdata('pesan', 'User berhasil diperbarui.');
             return redirect()->to('/user');
         } else {
             // Jika update gagal, set flashdata dan redirect kembali ke halaman edit
-            session()->setFlashdata('pesan', 'Gagal memperbarui data.');
+            session()->setFlashdata('pesan', 'Gagal memperbarui User.');
             return redirect()->to('/user/edit/' . $id);
         }
     }

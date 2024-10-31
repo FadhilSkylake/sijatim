@@ -65,7 +65,7 @@
                             </div>
                             <div class="modal-body">
                                 <p>Dapatkan berita, pembaruan, dan hal-hal terkini yang akan datang!<br>Daftar Newsletter kami di sini.</p>
-                                <form action="<?= base_url('/getemail') ?>" method="post">
+                                <form action="<?= base_url('/email/subscribe') ?>" method="post">
                                     <?= csrf_field() ?>
                                     <div class="form-group">
                                         <input type="email" class="form-control" placeholder="Email *" name="email">

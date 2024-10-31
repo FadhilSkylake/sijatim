@@ -37,7 +37,11 @@ class UserController extends BaseController
 
         // Jika validasi gagal, kembalikan error dalam bentuk JSON
         if (!$validation->withRequest($this->request)->run()) {
-            return $this->response->setJSON(['status' => 'error', 'errors' => $validation->getErrors()]);
+            // Jika validasi gagal, simpan pesan kesalahan di session
+            session()->setFlashdata('errors', $validation->getErrors());
+
+            // Kembalikan ke halaman yang sama
+            return redirect()->to('/user');
         }
 
         // Hashing password sebelum menyimpan ke database
@@ -51,11 +55,17 @@ class UserController extends BaseController
             'role' => $this->request->getPost('role'),
         ];
 
-        // Simpan data ke dalam tabel 'users'
-        $this->user->save($data);
 
-        // Kembalikan respons sukses dalam bentuk JSON
-        return $this->response->setJSON(['status' => 'success']);
+        // Cek apakah data berhasil ditambah
+        if ($this->user->save($data)) {
+            // Jika save berhasil, set flashdata dan redirect
+            session()->setFlashdata('pesan', 'Data berhasil diperbarui.');
+            return redirect()->to('/user');
+        } else {
+            // Jika save gagal, set flashdata dan redirect kembali ke halaman edit
+            session()->setFlashdata('pesan', 'Gagal memperbarui data.');
+            return redirect()->to('/user');
+        }
     }
 
     public function update($id)

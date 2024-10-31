@@ -18,13 +18,16 @@ $routes->get('/logout', 'AuthController::logout');
 $routes->get('/dashboard', 'DashboardController::index', ['filter' => 'authCheck']);
 
 // Produk
-$routes->get('produk', 'ProdukController::index');
-$routes->get('pilihproduk', 'ProdukController::indexProduk');
-$routes->post('produk/store', 'ProdukController::store');
-$routes->post('produk/update/(:segment)', 'ProdukController::update/$1');
-$routes->delete('produk/delete/(:segment)', 'ProdukController::delete/$1');
-$routes->get('produk/edit/(:num)', 'ProdukController::edit/$1');
-$routes->get('produk/getProduk/(:segment)', 'ProdukController::getProduk/$1');
+$routes->group('produk', ['filter' => 'authCheck'], function ($routes) {
+    $routes->get('/', 'ProdukController::index'); // untuk route produk
+    $routes->get('pilihproduk', 'ProdukController::indexProduk');
+    $routes->post('store', 'ProdukController::store');
+    $routes->post('update/(:segment)', 'ProdukController::update/$1');
+    $routes->delete('delete/(:segment)', 'ProdukController::delete/$1');
+    $routes->get('edit/(:num)', 'ProdukController::edit/$1');
+    $routes->get('getProduk/(:segment)', 'ProdukController::getProduk/$1');
+});
+
 
 // User
 $routes->get('user', 'UserController::index');
@@ -34,28 +37,24 @@ $routes->delete('user/delete/(:segment)', 'UserController::delete/$1');
 $routes->get('user/edit/(:num)', 'UserController::edit/$1');
 $routes->get('user/getUser/(:segment)', 'UserController::getUser/$1');
 
-// Email Marketing
-$routes->get('email', 'EmailController::index');
-$routes->post('/email', 'EmailController::sendEmail');
-//Email Subscribe
-$routes->post('getemail', 'EmailController::getEmail');
-$routes->get('emailsub', 'EmailController::showEmailSub');
-$routes->delete('email/delete/(:segment)', 'EmailController::delete/$1');
+//Email
+$routes->group('email', ['filter' => 'authCheck'], function ($routes) {
+    // Email Marketing
+    $routes->get('/', 'EmailController::index');
+    $routes->post('/', 'EmailController::sendEmail');
 
-// News
-$routes->get('news', 'NewsController::index');
-$routes->post('news/store', 'NewsController::store');
-$routes->post('news/update/(:segment)', 'NewsController::update/$1');
-$routes->delete('news/delete/(:segment)', 'NewsController::delete/$1');
-$routes->get('news/edit/(:num)', 'NewsController::edit/$1');
-$routes->get('news/getNews/(:segment)', 'NewsController::getNews/$1');
+    // Email Subscribe
+    $routes->post('subscribe', 'EmailController::getEmail');
+    $routes->get('subscribers', 'EmailController::showEmailSub');
+    $routes->delete('delete/(:segment)', 'EmailController::delete/$1');
+});
 
-$routes->get('pesanan', 'PesananController::index');
 
-$routes->get('pesanan/create', 'PesananController::create');
-$routes->post('pesanan/store', 'PesananController::store');
-
-$routes->post('/checkout', 'CheckoutController::submit', ['filter' => 'authCheck']);
-
-$routes->get('pesanan', 'PesananController::index');
-$routes->get('report', 'IpAddressController::index');
+$routes->group('news', ['filter' => 'authCheck'], function ($routes) {
+    $routes->get('/', 'NewsController::index'); // Untuk route utama news
+    $routes->post('store', 'NewsController::store');
+    $routes->post('update/(:segment)', 'NewsController::update/$1');
+    $routes->delete('delete/(:segment)', 'NewsController::delete/$1');
+    $routes->get('edit/(:num)', 'NewsController::edit/$1');
+    $routes->get('getNews/(:segment)', 'NewsController::getNews/$1');
+});

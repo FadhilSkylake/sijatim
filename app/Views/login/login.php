@@ -12,7 +12,7 @@
     <div class="container d-flex justify-content-center align-items-center min-vh-100">
         <div class="card shadow-lg w-50">
             <div class="card-body">
-                <h3 class="text-center mb-4">Masuk ke Akun Anda Untuk Melakukan Order</h3>
+                <h3 class="text-center mb-4">Login Page</h3>
 
                 <!-- Menampilkan pesan kesalahan jika ada -->
                 <?php if (session()->getFlashdata('error')): ?>
@@ -42,10 +42,6 @@
                     </div>
 
                     <button type="submit" class="btn btn-primary btn-block" id="login-btn">Masuk</button>
-
-                    <div class="text-center mt-3">
-                        <a href="<?= base_url('/register') ?>">Belum punya akun? Daftar di sini</a>
-                    </div>
                 </form>
             </div>
         </div>

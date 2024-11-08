@@ -149,6 +149,25 @@
         </div>
     </div>
 
+
+    <div id="produk" class="produk">
+        <div class="container my-5">
+            <h2 class="text-center">Our Produk</h2>
+            <div class="row justify-content-center">
+                <?php foreach ($produk as $index => $p): ?>
+                    <div class="col-md-4 d-flex align-items-stretch">
+                        <div class="card mx-2 my-3" style="min-width: 300px;">
+                            <div class="card-body">
+                                <h5><?= htmlspecialchars($p['nama_barang']); ?></h5>
+                                <p class="date"><?= htmlspecialchars($p['harga_barang']); ?></p>
+                            </div>
+                        </div>
+                    </div>
+                <?php endforeach; ?>
+            </div>
+        </div>
+    </div>
+
     <!--  footer -->
     <?= $this->include('landing/layouts/footer') ?>
     <!-- end footer -->

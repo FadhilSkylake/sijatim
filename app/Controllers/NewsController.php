@@ -36,7 +36,7 @@ class NewsController extends Controller
         // Simpan berita baru
         $this->m_news->saveNews($data);
 
-        return redirect()->to('/berita'); // Kembalikan ke kelola berita
+        return redirect()->to('/news'); // Kembalikan ke kelola berita
     }
 
 
@@ -67,7 +67,7 @@ class NewsController extends Controller
             session()->setFlashdata('errors', $validation->getErrors());
 
             // Kembalikan ke halaman form edit dengan id yang sama
-            return redirect()->to('/berita/edit/' . $id)->withInput();
+            return redirect()->to('/news/edit/' . $id)->withInput();
         }
 
         // Jika validasi berhasil, lanjutkan untuk memperbarui data
@@ -83,11 +83,11 @@ class NewsController extends Controller
         if ($this->m_news->update($id, $data)) {
             // Jika update berhasil, set flashdata dan redirect
             session()->setFlashdata('pesan', 'Data berhasil diperbarui.');
-            return redirect()->to('/berita');
+            return redirect()->to('/news');
         } else {
             // Jika update gagal, set flashdata dan redirect kembali ke halaman edit
             session()->setFlashdata('pesan', 'Gagal memperbarui data.');
-            return redirect()->to('/berita/edit/' . $id);
+            return redirect()->to('/news/edit/' . $id);
         }
     }
 

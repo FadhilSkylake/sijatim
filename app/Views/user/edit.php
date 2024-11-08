@@ -30,21 +30,21 @@
                 <div class="form-group row">
                     <label for="name" class="col-sm-2 col-form-label">Nama</label>
                     <div class="col-sm-5">
-                        <input type="text" class="form-control" id="name" name="name" autofocus value="<?= old('name', $user['name']); ?>" required>
+                        <input type="text" class="form-control" id="name" name="name" autofocus value="<?= old('name', $user['name']); ?>" required autocomplete="off">
                     </div>
                 </div>
 
                 <div class="form-group row">
                     <label for="email" class="col-sm-2 col-form-label">Email</label>
                     <div class="col-sm-5">
-                        <input type="email" class="form-control" id="email" name="email" value="<?= old('email', $user['email']); ?>" required>
+                        <input type="email" class="form-control" id="email" name="email" value="<?= old('email', $user['email']); ?>" required autocomplete="off">
                     </div>
                 </div>
 
                 <div class="form-group row">
                     <label for="password" class="col-sm-2 col-form-label">Password</label>
                     <div class="col-sm-5">
-                        <input type="password" class="form-control" id="password" name="password" placeholder="Kosongkan jika tidak ingin mengubah password">
+                        <input type="password" class="form-control" id="password" name="password" placeholder="Kosongkan jika tidak ingin mengubah password" autocomplete="off">
                     </div>
                 </div>
 

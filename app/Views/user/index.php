@@ -72,15 +72,15 @@
                 <div class="modal-body">
                     <div class="form-group">
                         <label>Username</label>
-                        <input type="text" class="form-control" name="name" placeholder="Username">
+                        <input type="text" class="form-control" name="name" placeholder="Username" autocomplete="off">
                     </div>
                     <div class="form-group">
                         <label>Email</label>
-                        <input type="email" class="form-control" placeholder="email" name="email">
+                        <input type="email" class="form-control" placeholder="email" name="email" autocomplete="off">
                     </div>
                     <div class="form-group">
                         <label>Password</label>
-                        <input type="password" class="form-control" placeholder="password" name="password">
+                        <input type="password" class="form-control" placeholder="password" name="password" autocomplete="off">
                     </div>
                     <div class="form-group">
                         <label>role</label>

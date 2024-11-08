@@ -27,7 +27,7 @@
 
                     <div class="form-group">
                         <label for="email">Email</label>
-                        <input type="email" name="email" id="email" class="form-control <?= session('errors.email') ? 'is-invalid' : '' ?>" placeholder="Masukkan email Anda" value="<?= old('email') ?>" required>
+                        <input type="email" name="email" id="email" class="form-control <?= session('errors.email') ? 'is-invalid' : '' ?>" placeholder="Masukkan email Anda" value="<?= old('email') ?>" required autocomplete="off">
                         <div class="invalid-feedback">
                             <?= session('errors.email') ?>
                         </div>
@@ -35,7 +35,7 @@
 
                     <div class="form-group">
                         <label for="password">Kata Sandi</label>
-                        <input type="password" name="password" id="password" class="form-control <?= session('errors.password') ? 'is-invalid' : '' ?>" placeholder="Masukkan kata sandi Anda" required>
+                        <input type="password" name="password" id="password" class="form-control <?= session('errors.password') ? 'is-invalid' : '' ?>" placeholder="Masukkan kata sandi Anda" required autocomplete="off">
                         <div class="invalid-feedback">
                             <?= session('errors.password') ?>
                         </div>

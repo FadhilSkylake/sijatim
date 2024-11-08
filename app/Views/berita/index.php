@@ -70,15 +70,15 @@
                 <div class="modal-body">
                     <div class="form-group">
                         <label>Judul Berita</label>
-                        <input type="text" class="form-control" name="judul berita" placeholder="Masukkan Judul Berita">
+                        <input type="text" class="form-control" name="judul_berita" placeholder="Masukkan Judul Berita">
                     </div>
                     <div class="form-group">
                         <label>Isi Berita</label>
-                        <textarea class="form-control" placeholder="isi berita" name="Masukkan Isi Berita"></textarea>
+                        <textarea class="form-control" placeholder="Masukkan Isi Berita" name="isi_berita"></textarea>
                     </div>
                     <div class="form-group">
                         <label>Date</label>
-                        <input type="date" class="form-control" name="judul berita" placeholder="Masukkan Judul Berita">
+                        <input type="date" class="form-control" name="date" placeholder="Masukkan Judul Berita">
                     </div>
                 </div>
                 <div class="modal-footer">

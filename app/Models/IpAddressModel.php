@@ -17,4 +17,17 @@ class IpAddressModel extends Model
             ->orderBy('total', 'DESC')
             ->findAll();
     }
+
+    // Fungsi untuk menghapus 100 entri tertua
+    public function deleteLimitedEntries($limit = 100)
+    {
+        // Ambil 100 id entri paling lama
+        $subquery = $this->select('id')
+            ->orderBy('id', 'ASC')
+            ->limit($limit)
+            ->getCompiledSelect();
+
+        // Hapus entri berdasarkan id dalam subquery
+        return $this->where("id IN ($subquery)")->delete();
+    }
 }

@@ -14,6 +14,7 @@ $routes->get('/login', 'AuthController::loginForm');
 $routes->post('/login', 'AuthController::login');
 $routes->get('/logout', 'AuthController::logout');
 
+$routes->get('/visitor-logs/truncate-limited', 'VisitorLogsController::truncateLimited');
 
 $routes->get('/dashboard', 'DashboardController::index', ['filter' => 'authCheck']);
 

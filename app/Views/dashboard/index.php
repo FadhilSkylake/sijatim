@@ -69,6 +69,9 @@
 
 <div class="container mt-5">
     <h2 class="mb-4">Visitor Logs</h2>
+    <form action="<?= base_url('/visitor-logs/truncate-limited') ?>" method="get" onsubmit="return confirm('Apakah Anda yakin ingin menghapus 100 entri?');">
+        <button type="submit">Hapus 100 Entri</button>
+    </form>
     <table id="universalTables" class="table table-bordered table-striped">
         <thead>
             <tr>

@@ -44,10 +44,10 @@ $routes->group('email', ['filter' => 'authCheck'], function ($routes) {
     $routes->post('/', 'EmailController::sendEmail');
 
     // Email Subscribe
-    $routes->post('subscribe', 'EmailController::getEmail');
     $routes->get('subscribers', 'EmailController::showEmailSub');
     $routes->delete('delete/(:segment)', 'EmailController::delete/$1');
 });
+$routes->post('/email/subscribe', 'EmailController::getEmail');
 
 
 $routes->group('news', ['filter' => 'authCheck'], function ($routes) {

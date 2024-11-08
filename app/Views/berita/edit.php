@@ -42,6 +42,13 @@
                     </div>
                 </div>
 
+                <div class="form-group row">
+                    <label for="date" class="col-sm-2 col-form-label">Tanggal</label>
+                    <div class="col-sm-5">
+                        <input type="date" class="form-control" id="date" name="date" autofocus value="<?= (old('date')) ? old('date') : esc($news['date']) ?>" required>
+                    </div>
+                </div>
+
                 <br>
                 <div class="form-group row">
                     <div class="col-sm-10">

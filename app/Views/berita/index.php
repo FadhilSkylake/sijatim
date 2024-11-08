@@ -31,7 +31,7 @@
                         <tr>
                             <th>#</th>
                             <th>Judul Berita</th>
-                            <th>Isi Berita</th>
+                            <th>Tanggal</th>
                             <th>Aksi</th>
                         </tr>
                     </thead>
@@ -40,7 +40,7 @@
                             <tr>
                                 <td><?= $key + 1 ?></td>
                                 <td><?= $n['judul_berita'] ?></td>
-                                <td><?= $n['isi_berita'] ?></td>
+                                <td><?= $n['date'] ?></td>
                                 <td>
                                     <a href="/news/edit/<?= $n['id_news']; ?>" class="btn btn-warning  font-weight-bold text-xs" data-toggle="tooltip">
                                         Edit
@@ -70,11 +70,15 @@
                 <div class="modal-body">
                     <div class="form-group">
                         <label>Judul Berita</label>
-                        <input type="text" class="form-control" name="judul berita" placeholder="judul_berita">
+                        <input type="text" class="form-control" name="judul berita" placeholder="Masukkan Judul Berita">
                     </div>
                     <div class="form-group">
                         <label>Isi Berita</label>
-                        <textarea class="form-control" placeholder="isi berita" name="isi_berita"></textarea>
+                        <textarea class="form-control" placeholder="isi berita" name="Masukkan Isi Berita"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>Date</label>
+                        <input type="date" class="form-control" name="judul berita" placeholder="Masukkan Judul Berita">
                     </div>
                 </div>
                 <div class="modal-footer">

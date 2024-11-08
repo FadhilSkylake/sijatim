@@ -77,6 +77,13 @@
         .card {
             width: 18rem;
         }
+
+        .date {
+            color: #666;
+            /* warna abu-abu */
+            font-size: 12px;
+            /* ukuran teks */
+        }
     </style>
     <!--[if lt IE 9]>
 <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
@@ -98,7 +105,7 @@
     <!-- end abouts -->
 
     <!-- jamur -->
-    <?= $this->include('landing/layouts/jamur') ?>
+    <?= $this->include('landing/layouts/news') ?>
     <!-- end jamur -->
 
     <!--  footer -->

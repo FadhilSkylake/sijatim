@@ -19,21 +19,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-sm-6">
-            <div class="card support-bar overflow-hidden">
-                <div class="card-body">
-                    <div class="row align-items-center">
-                        <div class="col-8">
-                            <h4 class="text-c-green">290+</h4>
-                            <h6 class="text-muted m-b-0">Total Pesanan</h6>
-                        </div>
-                        <div class="col-4 text-right">
-                            <i class="feather icon-file-text f-28"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+
     </div>
     <!-- support-section end -->
 </div>

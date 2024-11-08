@@ -19,8 +19,7 @@
                     </a>
                     <div class="dropdown-menu dropdown-menu-right profile-notification">
                         <div class="pro-head">
-                            <img src="assets/images/user/avatar-1.jpg" class="img-radius" alt="User-Profile-Image">
-                            <span>John Doe</span>
+                            <span>Admin</span>
                         </div>
                         <ul class="pro-body">
                             <li><a href="/logout" class="dropdown-item"><i class="feather icon-log-out m-r-5"></i> Logout</a></li>

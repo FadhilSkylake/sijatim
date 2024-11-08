@@ -19,10 +19,9 @@
                             <div class="limit-box">
                                 <nav class="main-menu ">
                                     <ul class="menu-area-main">
-                                        <li class="active"> <a href="index.html">Home</a> </li>
+                                        <li> <a href="#">Home</a> </li>
                                         <li> <a href="#about">About</a> </li>
-                                        <li> <a href="#produk">Produk</a> </li>
-                                        <li> <a href="#testimonial">Testimonial</a> </li>
+                                        <li> <a href="#news">News</a> </li>
                                     </ul>
                                 </nav>
                             </div>

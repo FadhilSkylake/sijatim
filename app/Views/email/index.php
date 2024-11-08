@@ -21,10 +21,10 @@
                     <label for="" class="col-sm-2 col-form-label">Pelanggan</label>
                     <div class="col-sm-5">
                         <select name="email_sub[]" class="form-control">
+                            <option selected disabled>Pilih Pelanggan</option>
                             <?php $db = db_connect();
                             $query = $db->query('SELECT * FROM email_sub');
                             foreach ($query->getResultArray() as $r) { ?>
-                                <!-- <option value="" selected enabled>Pilih Pelanggan</option> -->
                                 <option value="<?= $r['email'] ?>">(<?= $r['email'] ?>)</option>
                             <?php }
                             ?>
@@ -34,7 +34,7 @@
 
                 <div class="form-group row">
                     <label for="" class="col-sm-2 col-form-label">Isi Pesan</label>
-                    <div class="col-sm-5">
+                    <div class="col-sm-10">
                         <textarea type="text" class="form-control" id="isi" name="isi" placeholder="Isi Pesan" required></textarea>
                     </div>
                 </div>

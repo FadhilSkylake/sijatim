@@ -29,7 +29,8 @@ class NewsController extends Controller
         $data = [
             'judul_berita' => $judul_berita,
             'isi_berita' => $this->request->getPost('isi_berita'),
-            'slug' => url_title($judul_berita, '-', true) // Buat slug dari judul berita
+            'slug' => url_title($judul_berita, '-', true), // Buat slug dari judul berita
+            'date' => $this->request->getPost('date'),
         ];
 
         // Simpan berita baru
@@ -74,7 +75,8 @@ class NewsController extends Controller
         $data = [
             'judul_berita' => $judul_berita,
             'isi_berita' => $this->request->getVar('isi_berita'),
-            'slug' => url_title($judul_berita, '-', true) // Buat slug dari judul berita
+            'slug' => url_title($judul_berita, '-', true), // Buat slug dari judul berita
+            'date' => $this->request->getPost('date'),
         ];
 
         // Cek apakah data berhasil diupdate
